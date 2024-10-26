@@ -2,21 +2,21 @@
 
 ## Table of Contents
 
-1. [Introduction](#1.introduction)
-2. [Set Up](#2.setup)
-3. [Technologies Used](#3.technologies-used)
-4. [Features Implemented](#4.features-implemented)
-   - [4.1 Image Stitching](#41.image-stitching)
-   - [4.2 Edge Detection](#42.edge-detection)
+1. [Introduction](#1-introduction)
+2. [Set Up](#2-set-up)
+3. [Technologies Used](#3-technologies-used)
+4. [Features Implemented](#4-features-implemented)
+   - [4.1 Image Stitching](#41-image-stitching)
+   - [4.2 Edge Detection](#42-edge-detection)
      - [Canny Edge Detection](#canny-edge-detection)
      - [DoG with Morphological Operations](#dog-with-morphological-operations)
-   - [4.3 AI-Based Human Detection](#43.ai-based-human-detection)
-5. [User Interface & Workflow](#5.user-interface--workflow)
-6. [Challenges and Solutions](#6.challenges-and-solutions)
+   - [4.3 AI-Based Human Detection](#43-ai-based-human-detection)
+5. [User Interface & Workflow](#5-user-interface--workflow)
+6. [Challenges and Solutions](#6-challenges-and-solutions)
    - [1. Path Handling Issues](#1-path-handling-issues)
    - [2. Edge Detection Complexity](#2-edge-detection-complexity)
    - [3. Human Detection Model Integration](#3-human-detection-model-integration)
-7. [Conclusion](#7.conclusion)
+7. [Conclusion](#7-conclusion)
 
 ---
 
