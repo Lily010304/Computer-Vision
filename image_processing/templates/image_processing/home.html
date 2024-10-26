@@ -1,0 +1,97 @@
+{% extends "image_processing/layout.html" %}
+{% load static %}
+
+    {% block content  %}
+
+        <article class="media content-section">
+            <div class="media-body">
+            <h2><a class="article-title" href="{% url 'box' %}">Box Blur</a></h2>
+            <p class="article-content">A box blur (also known as a box linear filter) is a spatial domain linear filter in which each pixel in the resulting image has a value equal to the average value of its neighboring pixels in the input image.</p>
+            <div>
+                <img class="small" src="https://miro.medium.com/v2/resize:fit:350/1*DUut28QltnpM2d3MAQQhGw.png" alt="Gaussian Blur">
+                <img class="small" src="https://www.computerhope.com/jargon/p/photoshop-box-blur-filter.jpg" width="300" height="210" alt="Gaussian Blur">
+                <img class="small" src="https://miro.medium.com/v2/resize:fit:500/1*xYz1FeZ9zifAsu90S5A_Ew.png" width="300" height="210" alt="Gaussian Blur">
+            </div>
+            </div>
+        </article>
+        
+        <article class="media content-section">
+            <div class="media-body">
+            <h2><a class="article-title" href="{% url 'smoothing' %}">Gaussian Blur</a></h2>
+            <p class="article-content">Blurring an image by a Gaussian function, It is a widely used effect in graphics software, typically to reduce image noise and reduce detail.The visual effect of this blurring technique is a smooth blur resembling that of viewing the image through a translucent screen.</p>
+            <div>
+                <img class="small" src="https://miro.medium.com/v2/resize:fit:350/1*Fw-KFpv5k5ygprWVontuYQ.jpeg" alt="Gaussian Blur">
+                <img class="small" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Halftone%2C_Gaussian_Blur.jpg/140px-Halftone%2C_Gaussian_Blur.jpg" alt="Gaussian Blur">
+                <img class="small" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPb5AYgLNFz4e4bhALrV37yLw-2FMwWabkSPtIvARsZdtx49Bl5ek3GStFwyqrybfdBFU&usqp=CAU" width="370" height="215" alt="Gaussian Blur">
+            </div>
+            </div>
+        </article>
+
+        <article class="media content-section">
+            <div class="media-body">
+            <h2><a class="article-title" href="{% url 'dog' %}">The Difference of Gaussian</a></h2>
+            <p class="article-content"> is a feature enhancement algorithm that involves the subtraction of one Gaussian blurred version of an original image from another, less blurred version of the original.</p>
+            <div>
+                <img class="small" src="https://i.sstatic.net/I7SK6.jpg" width="370" height="215" alt="DOG">
+                <img class="small" src="https://slidetodoc.com/presentation_image_h/d78df588cf53d0d530f8690b17f298ce/image-3.jpg" width="370" height="215" alt="DOG">
+            </div>
+            </div>
+        </article>
+
+        <article class="media content-section">
+            <div class="media-body">
+            <h2><a class="article-title" href="{% url 'canny' %}">The Canny Detector</a></h2>
+            <p class="article-content"> The Canny edge detector is an edge detection operator that uses a multi-stage algorithm to detect a wide range of edges in images. It was developed by John F. Canny in 1986. Canny also produced a computational theory of edge detection explaining why the technique works. </p>
+            <div>
+                <img class="small" src="https://upload.wikimedia.org/wikipedia/commons/9/93/Valve_monochrome_canny_%286%29.PNG" width="370" height="215" alt="Canny">
+                <img class="small" src="https://miro.medium.com/v2/resize:fit:569/1*rXFHF7vO-9LYvyWT-f2Miw.png" width="370" height="215" alt="Canny">
+                <img class="small" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvEVVoypeax4sZAC5fdydRnDGYUAQbjAWyQlEhBaBeuuja7a5AoP1a7pjG-65nJO05oq8&usqp=CAU" width="370" height="215" alt="Canny">
+            </div>
+            </div>
+        </article>
+
+        <article class="media content-section">
+            <div class="media-body">
+            <h2><a class="article-title" href="{% url 'stitch' %}">Image Stitching</a></h2>
+            <p class="article-content"> Image stitching is a method for creating composite images, including panoramic views, from several overlapping photographs. </p>
+            <div>
+                <img class="small" src="https://pyimagesearch.com/wp-content/uploads/2016/01/bryce_result_02.jpg" width="370" height="215" alt="stitching">
+                <img class="small" src="https://pyimagesearch.com/wp-content/uploads/2016/01/sedona_result_01.jpg" width="370" height="215" alt="stitching">
+                <img class="small" src="https://miro.medium.com/v2/resize:fit:688/1*pkpnw6-U5ggkGOytz-gMRQ.jpeg" width="370" height="215" alt="stitching">
+            </div>
+            </div>
+        </article>
+
+        <article class="media content-section">
+            <div class="media-body">
+                <h2><a class="article-title" href="{% url 'process' %}">Full Workflow: Stitching, Canny, DoG & Morphological Operations</a></h2>
+                <p class="article-content"> This combined operation starts by stitching images together, followed by applying Canny Edge Detection, DoG, and morphological operations. A slider allows users to dynamically adjust the kernel size for the morphological operation to modify the final result.</p>
+                <img class="small" src="https://pyimagesearch.com/wp-content/uploads/2016/01/bryce_result_02.jpg" width="370" height="215" alt="stitching">
+                <img class="small" src="https://upload.wikimedia.org/wikipedia/commons/9/93/Valve_monochrome_canny_%286%29.PNG" width="370" height="215" alt="Canny">
+                <img class="small" src="https://i.sstatic.net/I7SK6.jpg" width="370" height="215" alt="DOG">
+            </div>
+        </article>
+
+        <article class="media content-section">
+            <div class="media-body">
+            <h2><a class="article-title" href="{% url 'ai_human_detection' %}">Human Detection (Latest Stitched Image)</a></h2>
+            <p class="article-content"> This operation runs human detection on the latest stitched image using an AI-based object detection model (YOLOv3). The system filters out any detections with less than 50% confidence and displays bounding boxes around detected human figures.
+
+            </p>
+            <img class="small" src="https://yeditek.com/uploads/files/172242049184.07-person-detection-0202.png" width="370" height="215" alt="DOG">
+            <img class="small" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0oJp6VumQdLnhfTrlOx_gQBUwpf9w-yTypnrLEFPG-KAuf45UhYUIAovz3l9Z7bHWVlE&usqp=CAU" width="370" height="215" alt="DOG">
+            <img class="small" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-TkMvNr-0wBCpbUlbF3ROV1n-c8sOOytT10cUPIEi5mmdPYIR3DDosjY1VvP-GILDbuI&usqp=CAU" width="370" height="215" alt="DOG">
+        
+            </div>
+        </article>
+    
+        <article class="media content-section">
+            <div class="media-body">
+            <h2><a class="article-title" href="{% url 'human_detect' %}">Human Detection (Upload New Image)</a></h2>
+            <p class="article-content"> This operation allows you to upload a new image, and the human detection model (YOLOv3) will run on the image. Only detections with confidence levels above 50% are displayed with bounding boxes marking human figures. </p>
+            <img class="small" src="https://yeditek.com/uploads/files/172242049184.07-person-detection-0202.png" width="370" height="215" alt="DOG">
+            <img class="small" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0oJp6VumQdLnhfTrlOx_gQBUwpf9w-yTypnrLEFPG-KAuf45UhYUIAovz3l9Z7bHWVlE&usqp=CAU" width="370" height="215" alt="DOG">
+            <img class="small" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-TkMvNr-0wBCpbUlbF3ROV1n-c8sOOytT10cUPIEi5mmdPYIR3DDosjY1VvP-GILDbuI&usqp=CAU" width="370" height="215" alt="DOG">
+        </div>
+        </article>
+    {% endblock content  %}

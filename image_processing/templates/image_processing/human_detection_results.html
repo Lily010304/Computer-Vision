@@ -1,0 +1,14 @@
+{% extends "image_processing/layout.html" %}
+
+{% block content %}
+<h1>Human Detection Results</h1>
+
+<article class="media content-section">
+    <h2>Detected Humans</h2>
+    <div class="media-body">
+        <img width="1400" height="700" src="/media/human_detection_result.jpg" alt="Human Detection Result">
+    </div>
+</article>
+
+<a href="{% url 'cv-home' %}">Back to Home</a>
+{% endblock content %}

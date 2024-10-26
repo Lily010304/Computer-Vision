@@ -1,0 +1,43 @@
+<!-- results.html -->
+{% extends "image_processing/layout.html" %}
+
+{% block content %}
+<h1>Edge Detection Results</h1>
+<h2><h4>{{ media }}</h4></h2>
+
+<article class="media content-section">
+    <h2>Stitched Image</h2>
+    <div class="media-body">
+        <img width="500" src="/media/stitched_result.jpg" alt="Stitched Image">
+    </div>
+</article>
+
+<article class="media content-section">
+    <h2>Canny Edge Detection</h2>
+    <div class="media-body">
+        <img width="500" src="/media/canny_result.jpg" alt="Canny Edge Detection">
+    </div>
+</article>
+
+<article class="media content-section">
+    <h2>DoG Edge Detection</h2>
+    <div class="media-body">
+        <img width="500" src="/media/dog_result.jpg" alt="DoG Edge Detection">
+    </div>
+</article>
+
+<article class="media content-section">
+    <h2>Morphological Operation (Kernel Adjustment)</h2>
+    <div class="media-body">
+        <form method="POST" action="{% url 'apply_morphological_operation' %}">
+            {% csrf_token %}
+            <label for="kernel-size">Select Kernel Size:</label>
+            <input type="range" id="kernel-size" name="kernel_size" min="1" max="15" value="3" step="2" oninput="document.getElementById('ks-value').innerText = this.value;">
+            <span id="ks-value">3</span>  <!-- Display selected kernel size -->
+            <button type="submit">Apply Morphological Operation</button>
+        </form>
+    </div>
+</article>
+
+<a href="{% url 'cv-home' %}">Back to Home</a>
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends "image_processing/layout.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<h1>Box Blur</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ image_form| crispy }}
+    {{ box_form| crispy }}
+    <button type="submit">Apply Box Blur</button>
+</form>
+{% endblock content %}
+
+{% block side %}
+<div class="instructions">
+    <h3>How to Use the Box Blur Operation</h3>
+    <p>
+        Follow these simple steps to apply a Box Blur to your image:
+    </p>
+    <ol>
+        <li>Click on the <strong>"Browse"</strong> button to upload an image from your device.</li>
+        <li>In the <strong>"Mask Size"</strong> field, select the desired mask size for the blur effect.</li>
+        <li>Once you've chosen your options, click <strong>"Apply Box Blur"</strong> to process the image.</li>
+        <li>Wait a few moments, and the blurred image will be displayed.</li>
+    </ol>
+    <p>
+        If you're not satisfied with the result, feel free to adjust the mask size and reapply the operation.
+    </p>
+</div>
+{% endblock side %}

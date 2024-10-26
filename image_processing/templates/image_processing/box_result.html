@@ -1,0 +1,30 @@
+
+{% extends "image_processing/layout.html" %}
+
+{% block content %}
+<h1>Box Blurring Result</h1>
+
+<article class="media content-section">
+    <h2>Original Image</h2>
+    <div class="card mb-3">
+        <div class="card">
+            <img width="400" height="400" class="card-img-top" src="{{ result_image1 }}" alt="Original Image">
+            <div class="card-body">
+                <h5 class="card-title">Original Image</h5>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="media content-section">
+    <h2>Result Image of Box Blur</h2>
+    <div class="card mb-3">
+        <img class="card-img-top" src="{{ result_image2 }}" alt="blurred Image">
+        <div class="card-body">
+            <h5 class="card-title">Box Blur Image</h5>
+        </div>
+    </div>
+</article>
+
+<a href="{% url 'cv-home' %}" class="btn btn-primary">Back to Home</a>
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends "image_processing/layout.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<h1>Humans Detector</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ image_form| crispy }}
+    <button type="submit">Apply Human Detection</button>
+</form>
+{% endblock content %}
+
+{% block side %}
+<div class="instructions">
+    <h3>How to Use Human Detection</h3>
+    <p>To detect humans in your uploaded image, follow these steps:</p>
+    <ol>
+        <li>Click on <strong>"Browse"</strong> to upload an image.</li>
+        <li>Click <strong>"Apply Human Detection"</strong> to start the process.</li>
+        <li>Wait a few moments, and any detected humans will be highlighted with bounding boxes.</li>
+    </ol>
+    <p>The detection algorithm only detects humans with more than 50% confidence.</p>
+</div>
+{% endblock side %}

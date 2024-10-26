@@ -1,0 +1,14 @@
+{% extends "image_processing/layout.html" %}
+
+{% block content %}
+<h1>Morphological Operation Result</h1>
+
+<article class="media content-section">
+    <h2>Morphed Image</h2>
+    <div class="media-body">
+        <img width="500" src="/media/morphed_result.jpg" alt="Morphed Image">
+    </div>
+</article>
+
+<a href="{% url 'cv-home' %}">Back to Home</a>
+{% endblock content %}

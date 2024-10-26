@@ -1,0 +1,25 @@
+{% extends "image_processing/layout.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<h1>Stitching</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="images" multiple>
+    <button type="submit">Apply Stitching</button>
+</form>
+{% endblock content %}
+
+{% block side %}
+<div class="instructions">
+    <h3>How to Stitch Images Together</h3>
+    <p>To stitch multiple images, follow these steps:</p>
+    <ol>
+        <li>Click on <strong>"Browse"</strong> to select multiple images (hold CTRL or SHIFT to choose more than one).</li>
+        <li>Click <strong>"Upload Images"</strong> to begin stitching.</li>
+        <li>The stitched image will be displayed once the process completes.</li>
+    </ol>
+    <p>Ensure that the images have similar perspectives and overlapping content for best results.</p>
+</div>
+{% endblock side %}

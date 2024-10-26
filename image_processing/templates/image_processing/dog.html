@@ -1,0 +1,27 @@
+{% extends "image_processing/layout.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<h1>Smoothing</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ image_form| crispy }}
+    {{ dog_form| crispy }}
+    <button type="submit">Apply DOG</button>
+</form>
+{% endblock content %}
+{% block side %}
+<div class="instructions">
+    <h3>How to Use the Difference of Gaussians (DoG)</h3>
+    <p>Follow these steps to apply the DoG operation on your image:</p>
+    <ol>
+        <li>Click on the <strong>"Browse"</strong> button to upload your image.</li>
+        <li>Select the first kernel size in the Mask Size 1.</li>
+        <li>Select the second kernel size in the Mask Size 2.</li>
+        <li>Click <strong>"Apply DoG"</strong> to process the image.</li>
+        <li>The image with the DoG effect applied will be displayed shortly.</li>
+    </ol>
+    <p>You can tweak the kernel size to modify the effect of the smoothing.</p>
+</div>
+{% endblock side %}

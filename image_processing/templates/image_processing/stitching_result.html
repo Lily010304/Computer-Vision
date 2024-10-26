@@ -1,0 +1,32 @@
+{% extends "image_processing/layout.html" %}
+
+{% block content %}
+<h1>Stitching Result</h1>
+    <article class="media content-section">
+        <h2>Original Images</h2>
+        <div class="row">
+            {% for image in originals %}
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img class="card-img-top" src="{{ MEDIA_URL }}{{ image }}" alt="Original Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Original Image</h5>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </article>
+
+    <article class="media content-section">
+        <h2>Result Image of Stitching</h2>
+        <div class="card mb-3">
+            <img class="card-img-top" src="{{ MEDIA_URL }}{{ result_image }}" alt="Stitched Image">
+            <div class="card-body">
+                <h5 class="card-title">Stitched Image</h5>
+            </div>
+        </div>
+    </article>
+<a href="{% url 'cv-home' %}" class="btn btn-primary">Back to Home</a>
+
+{% endblock content %}

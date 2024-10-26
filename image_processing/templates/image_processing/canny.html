@@ -1,0 +1,24 @@
+{% extends "image_processing/layout.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<h1>Canny Detector</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ image_form| crispy }}
+    <button type="submit">Apply Canny</button>
+</form>
+{% endblock content %}
+{% block side %}
+<div class="instructions">
+    <h3>How to Use the Canny Edge Detector</h3>
+    <p>Follow these steps to detect edges in your image using the Canny Edge Detector:</p>
+    <ol>
+        <li>Click on the <strong>"Browse"</strong> button to upload an image.</li>
+        <li>Once you've uploaded the image, click <strong>"Apply Canny"</strong> to start the edge detection process.</li>
+        <li>Wait a few moments, and the processed image with detected edges will be displayed.</li>
+    </ol>
+    <p>For better results, ensure the image has clear contrast between different areas.</p>
+</div>
+{% endblock side %}

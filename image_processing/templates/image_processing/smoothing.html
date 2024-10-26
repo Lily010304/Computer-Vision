@@ -1,0 +1,27 @@
+{% extends "image_processing/layout.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<h1>Smoothing</h1>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ image_form| crispy }}
+    {{ smoothing_form| crispy }}
+    <button type="submit">Apply Smoothing</button>
+</form>
+{% endblock content %}
+{% block side %}
+<div class="instructions">
+    <h3>How to Apply Smoothing</h3>
+    <p>To apply smoothing to your image, follow these steps:</p>
+    <ol>
+        <li>Click <strong>"Browse"</strong> to upload your image.</li>
+        <li>Select the smoothing parameter (e.g., mask size) using the available options.</li>
+        <li>Click <strong>"Apply Smoothing"</strong> to process the image.</li>
+        <li>The smoothed image will be displayed after processing.</li>
+    </ol>
+    <p>Adjust the mask size for finer control over the smoothing effect.</p>
+</div>
+{% endblock side %}
+

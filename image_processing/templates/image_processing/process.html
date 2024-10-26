@@ -1,0 +1,26 @@
+{% extends "image_processing/layout.html" %}
+
+{% block content %}
+<h1>Image Stitching and Edge Detection</h1>
+
+<!-- Form for uploading multiple images -->
+<form method="POST" enctype="multipart/form-data" action="{% url 'process_images' %}">
+    {% csrf_token %}
+    <label for="images">Select Images to Stitch:</label>
+    <input type="file" name="images" id="images" multiple required>
+    <button type="submit">Upload Images</button>
+</form>
+
+{% endblock content %}
+{% block side %}
+<div class="instructions">
+    <h3>How to Use Image Stitching and Morphological Operations</h3>
+    <p>Follow these steps to stitch multiple images and apply morphological operations:</p>
+    <ol>
+        <li>Click on <strong>"Browse"</strong> to upload multiple images for stitching (hold CTRL or SHIFT to select more than one image).</li>
+        <li>Click <strong>"Upload Images"</strong> to start the stitching process.</li>
+        <li>Once the images are stitched, you'll be able to adjust the size of the morphological operation using the provided slider.</li>
+        <li>After adjusting the slider to your desired kernel size, the system will apply the morphological operation to the stitched image.</li>
+    </ol>
+</div>
+{% endblock side %}

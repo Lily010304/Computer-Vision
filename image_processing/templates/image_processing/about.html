@@ -1,0 +1,30 @@
+{% extends "image_processing/layout.html" %}
+
+    {% block content %}
+    <h1>About This App</h1>
+    <p>Welcome to our Image Processing App! This web application allows users to perform advanced image processing operations seamlessly. It is designed for ease of use, offering a variety of tools for image manipulation, including image stitching, edge detection, and AI-based human detection.</p>
+    
+    <h2>Features</h2>
+    <ul>
+        <li><strong>Image Stitching:</strong> Upload multiple images and stitch them together to create a single, coherent image. This feature is perfect for panorama creation or merging related images.</li>
+        <li><strong>Edge Detection:</strong> Apply Canny edge detection or Difference of Gaussians (DoG) to the stitched image. Use the sliders to dynamically adjust kernel sizes for better control over the edge detection process.</li>
+        <li><strong>Morphological Operations:</strong> Fine-tune your edge detection with the ability to adjust the kernel size for morphological operations, allowing you to smooth or highlight edges as needed.</li>
+        <li><strong>AI-Based Human Detection:</strong> Detect human figures in images using pre-trained YOLOv3 models with a confidence threshold of 50% or more, ensuring accurate detection results.</li>
+    </ul>
+    
+    <h2>How It Works</h2>
+    <p>Our app is designed with user simplicity in mind. Here’s the basic workflow:</p>
+    <ol>
+        <li>Users can upload multiple images to be stitched together.</li>
+        <li>Once the images are combined, various image processing techniques, such as edge detection and human detection, can be applied.</li>
+        <li>All operations are performed server-side, ensuring fast and reliable processing.</li>
+    </ol>
+    
+    <h2>Who Is This For?</h2>
+    <p>This app is ideal for anyone who needs to quickly and efficiently perform image processing tasks. Whether you're a developer, researcher, or hobbyist, the tools provided can assist in generating results for projects involving image stitching, edge detection, and human detection.</p>
+    
+    <h2>Get Started</h2>
+    <p>To start using the app, simply navigate to the home page, upload your images, and explore the available processing options!</p>
+    
+    {% endblock content %}
+    
